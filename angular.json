@@ -97,11 +97,29 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/todo-list/"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "a482ce64-183a-413e-a4a5-65b2c889ea50"
+    "analytics": "a482ce64-183a-413e-a4a5-65b2c889ea50",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
